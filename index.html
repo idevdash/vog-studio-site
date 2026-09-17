@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VOG Studio</title>
+<style>
+  :root{
+    --bg:#F5F5F7; --fg:#1D1D1F; --soft:#6E6E73; --line:#DFDFE4;
+    --accent:#0071E3; --card:#fff;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#17171A; --fg:#F5F5F7; --soft:#9A9AA0; --line:#34343A;
+          --accent:#0A84FF; --card:#202024}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:660px;margin:0 auto;padding:64px 22px 90px}
+  h1{font-size:clamp(2rem,6vw,2.6rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 10px}
+  .sub{color:var(--soft);font-size:1.05rem;margin:0 0 40px}
+  h2{font-size:1.15rem;letter-spacing:-.01em;margin:38px 0 10px}
+  p{margin:0 0 15px;max-width:62ch}
+  ul{margin:0 0 15px;padding-left:1.2em;max-width:62ch}
+  li{margin-bottom:7px}
+  a{color:var(--accent)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin:28px 0}
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+    color:var(--soft);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>VOG Studio</h1>
+  <p class="sub">A personal tool for writing and posting devotional comments on
+    YouTube sermon videos.</p>
+
+  <p>VOG Studio is a small application that runs locally on its author's own
+    computer. It is not a service, not a product, and not available to other
+    users. It exists to help one person — its author — write thoughtful
+    devotional comments on Malayalam-language sermon videos and post them to
+    YouTube from his own account.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Lists videos from a public YouTube channel</li>
+    <li>Downloads the automatic captions YouTube publishes for those videos</li>
+    <li>Translates them from Malayalam to English</li>
+    <li>Writes short devotional comments from the translated text</li>
+    <li>Shows them for review, and posts the approved ones to YouTube</li>
+  </ul>
+
+  <div class="card">
+    <p style="margin:0"><strong>Nothing posts without being read first.</strong>
+      Every comment is reviewed and approved by hand before it can be sent. The
+      approval gate is enforced by the software itself.</p>
+  </div>
+
+  <h2>Why it needs YouTube access</h2>
+  <p>It uses the YouTube Data API to post comments and like videos as the
+    signed-in user. That is the only reason it asks for access, and it acts
+    only on that user's own behalf.</p>
+
+  <h2>Privacy</h2>
+  <p>See the <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer>
+    A personal project. Not affiliated with, endorsed by, or connected to
+    YouTube or Google.<br>Last updated 17 September 2026.
+  </footer>
+</div>
+</body>
+</html>
